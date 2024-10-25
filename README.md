@@ -1,5 +1,15 @@
 # Firebase-with-multistream-in-ESP8266-NodeMCU
-An IoT-based ESP8266 program that connects to Firebase Realtime Database to monitor and control devices remotely. It reads sensor data and sends it to Firebase while also checking for updates to the Firebase database that can control connected devices.
+An IoT-based ESP8266 program that connects to Firebase Realtime Database to monitor and control devices remotely. It reads sensor data and sends it to Firebase while also checking for updates to the Firebase database that can control connected devices. 
+
+Library used:
+FirebaseESP8266.h by Mobizt: This library enables communication between the ESP8266 module and Firebase Realtime Database. It allows reading from and writing to the database, setting up streams for real-time updates, and handling JSON data. 
+Link: https://github.com/mobizt/Firebase-ESP8266
+
+ESP8266WiFi.h by : This library connects the ESP8266 module to a Wi-Fi network, enabling internet connectivity required to communicate with Firebase.
+Link: https://github.com/esp8266/Arduino
+
+ArduinoJson.h by : This library provides JSON parsing and generation for Arduino-based projects. It’s used here to handle JSON data received from Firebase, allowing the ESP8266 to read and control multiple devices based on Firebase’s JSON structure. 
+Link: https://github.com/bblanchon/ArduinoJson
 
 Here is the some explantion to the code:
 1. The FirebaseData object manages communication with Firebase. MAX_DEVICES is a limit for the devices controlled in this project, and devicesKeys and devicesValues hold device information.
